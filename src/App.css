@@ -1,0 +1,47 @@
+nav {
+  transition: 1s all ease-in-out;
+}
+
+nav header {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.home {
+  height: calc(100vh - 56px);
+  background: url("./images/architect.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.home span {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.projectsContainer {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  grid-template-columns: repeat(4, 300px);
+  grid-template-rows: repeat(2, 225px);
+}
+
+.projectsContainer div {
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1300px) and (min-width: 700px) {
+  .projectsContainer {
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 150px);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .projectsContainer {
+    grid-template-columns: 225px;
+    grid-template-rows: repeat(8, 150px);
+  }
+}
